@@ -1,3 +1,5 @@
+<?php include "config/connection.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,16 +23,21 @@
     <div class="card card-login mx-auto mt-5">
       <div class="card-header">Login</div>
       <div class="card-body">
-        <form>
+
+        <div class="alert alert-danger" role="alert" style="margin-top:20px; padding:10px; <?php if(!isset($_GET['check'])){ ?>display:none;<?php } ?>">
+					Login Failed
+				</div>
+        
+        <form method="post" action="module/login-check.php">
           <div class="form-group">
             <label for="exampleInputUsername1">Username</label>
-            <input class="form-control" id="exampleInputUsername1" type="text" aria-describedby="usernameHelp" placeholder="Username">
+            <input class="form-control" id="exampleInputUsername1" type="text" aria-describedby="usernameHelp" placeholder="Username" name="username">
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
-            <input class="form-control" id="exampleInputPassword1" type="password" placeholder="Password">
+            <input class="form-control" id="exampleInputPassword1" type="password" placeholder="Password" name="password">
           </div>
-          <a class="btn btn-primary btn-block" href="index.php">Login</a>
+          <button type="submit" class="btn btn-primary btn-block" href="index.php">Login</button>
         </form>
       </div>
     </div>
