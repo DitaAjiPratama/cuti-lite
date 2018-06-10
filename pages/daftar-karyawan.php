@@ -6,7 +6,10 @@
 <!-- Example DataTables Card-->
 <div class="card mb-3">
   <div class="card-header">
-    <h5><i class="fa fa-calendar"></i> Daftar Karyawan</h5>
+    <h5 class="float-left"><i class="fa fa-calendar"></i> Daftar Karyawan</h5>
+    <a href="#" class="btn btn-sm btn-primary float-right">
+      <i class="fa fa-plus"></i> Add
+    </a>
   </div>
   <div class="card-body">
     <div class="table-responsive">
@@ -20,6 +23,7 @@
             <th>Username</th>
             <th>Password</th>
             <th>Level</th>
+            <th>Action</th>
           </tr>
         </thead>
 

@@ -22,6 +22,14 @@
     <td><?= $row['username']; ?></td>
     <td><?= $row['password']; ?></td>
     <td><?= $row['level']; ?></td>
+    <td>
+      <a href="#" class="btn btn-sm btn-success">
+        <i class="fa fa-edit"></i> Edit
+      </a>
+      <a href="#" class="btn btn-sm btn-danger">
+        <i class="fa fa-trash"></i> Delete
+      </a>
+    </td>
   </tr>
 
 <?php
