@@ -23,6 +23,7 @@
             <th>Nama</th>
             <th>Divisi</th>
             <th>Tanggal</th>
+            <th>Jumlah Hari</th>
             <th>Jenis Cuti</th>
             <th>Keterangan</th>
             <th>Status</th>

@@ -8,7 +8,7 @@
 
     include "config/connection.php";
 
-    $result = mysqli_query($con,"SELECT *, status_cuti.id AS pilih FROM status_cuti
+    $result = mysqli_query($con,"SELECT *, (DATEDIFF(tanggal_selesai, tanggal_mulai)+1) AS jumlah_hari, status_cuti.id AS pilih FROM status_cuti
       INNER JOIN karyawan
       ON status_cuti.id_karyawan = karyawan.id
       WHERE (
@@ -25,6 +25,7 @@
     <td><?= $row['nama']; ?></td>
     <td><?= $row['divisi']; ?></td>
     <td><?= $row['tanggal_mulai']; ?> - <?= $row['tanggal_selesai']; ?></td>
+    <td><?= $row['jumlah_hari']; ?></td>
     <td><?= $row['jenis_cuti']; ?></td>
     <td><?= $row['keterangan_cuti']; ?></td>
     <td>
