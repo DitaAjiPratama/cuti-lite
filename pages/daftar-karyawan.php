@@ -6,10 +6,10 @@
 <!-- Example DataTables Card-->
 <div class="card mb-3">
   <div class="card-header">
-    <h5 class="float-left"><i class="fa fa-calendar"></i> Daftar Karyawan</h5>
-    <a href="#" class="btn btn-sm btn-primary float-right">
+    <h5 class="float-left"><i class="fa fa-users"></i> Daftar Karyawan</h5>
+    <button type="button" data-toggle="modal" data-target="#add" class="btn btn-sm btn-primary float-right">
       <i class="fa fa-plus"></i> Add
-    </a>
+    </button>
   </div>
   <div class="card-body">
     <div class="table-responsive">
@@ -28,7 +28,14 @@
         </thead>
 
         <tbody>
-          <?php view(date("Y")); ?>
+          <script type="text/javascript">
+            $(function(){
+              <?php if ( isset($_GET['id']) ) { ?>
+              $("#edit").modal("show");
+              <?php } ?>
+            });
+          </script>
+          <?php view(); ?>
         </tbody>
 
       </table>

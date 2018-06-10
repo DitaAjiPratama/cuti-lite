@@ -12,7 +12,7 @@
 <!-- Example DataTables Card-->
 <div class="card mb-3">
   <div class="card-header">
-    <h5><i class="fa fa-clock-o"></i> Status cuti yang diambil tahun <?= date("Y"); ?></h5>
+    <h5><i class="fa fa-clock-o"></i> Pending Approval</h5>
   </div>
   <div class="card-body">
     <div class="table-responsive">
