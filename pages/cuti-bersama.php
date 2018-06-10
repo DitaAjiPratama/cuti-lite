@@ -6,7 +6,7 @@
 <!-- Example DataTables Card-->
 <div class="card mb-3">
   <div class="card-header">
-    <i class="fa fa-table"></i> Daftar cuti bersama tahun <?= date("Y"); ?>
+    <h5><i class="fa fa-calendar"></i> Daftar cuti bersama tahun <?= date("Y"); ?></h5>
   </div>
   <div class="card-body">
     <div class="table-responsive">

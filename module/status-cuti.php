@@ -28,24 +28,25 @@
 
     include "config/connection.php";
 
-    $result = mysqli_query($con,"SELECT COUNT(*) AS jumlah FROM status_cuti
+    $jumlah = 0;
+    $result = mysqli_query($con,"SELECT * FROM status_cuti
       INNER JOIN karyawan
       ON status_cuti.id_karyawan = karyawan.id
       WHERE username = '$session_user'
       AND status_pengajuan = 'Di Terima'
     ");
     while ($row = mysqli_fetch_array($result)) {
-      $jumlah = $row['jumlah'];
+      $tanggal_mulai = $row['tanggal_mulai'];
+      $tanggal_selesai = $row['tanggal_selesai'];
+
+      $selisih = mysqli_query($con,"SELECT DATEDIFF('$tanggal_selesai', '$tanggal_mulai') AS selisih");
+      while ($row2 = mysqli_fetch_array($selisih)) {
+        $jumlah = $jumlah + $row2['selisih'] + 1;
+      }
+
     }
 
-    $result = mysqli_query($con,"SELECT * FROM karyawan
-      WHERE username = '$session_user'
-    ");
-    while ($row = mysqli_fetch_array($result)) {
-      $jatah = $row['jatah_cuti_per_tahun'];
-    }
-
-    $sisa = $jatah-$jumlah;
+    $sisa = jatah_cuti($session_user) - $jumlah;
 
     return $sisa;
   }

@@ -29,27 +29,3 @@
     }
   }
 ?>
-
-
-
-<?php
-
-  // ==============================================================================
-  // Fungsi add()
-  // ==============================================================================
-
-  function add($tanggal_mulai, $tanggal_selesai, $keterangan_cuti) {
-
-    include "config/connection.php";
-
-    $sql = "INSERT INTO mahasiswa
-      VALUES (
-        DEFAULT,
-        '$tanggal_mulai',
-        '$tanggal_selesai',
-        '$keterangan_cuti'
-      )
-    ";
-  }
-
-?>

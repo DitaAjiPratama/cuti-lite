@@ -29,6 +29,15 @@
       </li>
 
       <?php if ($_SESSION["level"]=="admin") { ?>
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tambah Cuti Bersama">
+        <a class="nav-link" href="?page=tambah-cuti-bersama">
+          <i class="fa fa-fw fa-calendar-plus-o"></i>
+          <span class="nav-link-text">Tambah Cuti Bersama</span>
+        </a>
+      </li>
+      <?php } ?>
+
+      <?php if ($_SESSION["level"]=="admin") { ?>
       <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Pending Approval">
         <a class="nav-link" href="?page=pending-approval">
           <i class="fa fa-fw fa-clock-o"></i>
