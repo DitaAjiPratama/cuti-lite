@@ -46,6 +46,15 @@
       </li>
       <?php } ?>
 
+      <?php if ($_SESSION["level"]=="admin") { ?>
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Daftar Karyawan">
+        <a class="nav-link" href="?page=daftar-karyawan">
+          <i class="fa fa-fw fa-users"></i>
+          <span class="nav-link-text">Daftar Karyawan</span>
+        </a>
+      </li>
+      <?php } ?>
+
     </ul>
     <ul class="navbar-nav sidenav-toggler">
       <li class="nav-item">
