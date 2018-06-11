@@ -241,7 +241,11 @@
 
           <div class="form-group">
             <label for="level"><b>Level :</b></label>
-            <input class="form-control" type="text" id="level" name="level" value="">
+            <select class="form-control" id="level" name="level">
+              <option value="" selected disabled>Select Level</option>
+              <option value="admin">admin</option>
+              <option value="user">user</option>
+            </select>
           </div>
 
           <button type="submit" name="submit" value="add" class="btn btn-default">Tambah</button>
@@ -326,6 +330,15 @@
           <div class="form-group">
             <label for="level"><b>Level :</b></label>
             <input class="form-control" type="text" id="level" name="level" value="<?= $row['level']; ?>">
+            <select class="form-control" id="level" name="level">
+              <option value="" disabled>Select Level</option>
+              <option value="admin" 
+                <?php if ($row['level'] == "admin") echo "selected"; ?>
+              >admin</option>
+              <option value="user"
+                <?php if ($row['level'] == "user") echo "selected"; ?>
+              >user</option>
+            </select>
           </div>
 
           <button type="submit" name="submit" value="edit" class="btn btn-default">Edit</button>
