@@ -4,7 +4,7 @@
   // Fungsi add()
   // ==============================================================================
 
-  function add($tanggal_mulai, $tanggal_selesai, $jenis_cuti, $keterangan_cuti, $status_pengajuan) {
+  function add($tanggal_mulai, $tanggal_selesai, $keterangan_cuti) {
 
     include "config/connection.php";
 
@@ -17,9 +17,9 @@
           DEFAULT,
           '$tanggal_mulai',
           '$tanggal_selesai',
-          '$jenis_cuti',
+          'Cuti Bersama',
           '$keterangan_cuti',
-          '$status_pengajuan',
+          'Di Terima',
           '$id_karyawan'
         )
       ";
@@ -35,7 +35,7 @@
   }
 
   if (isset($_POST['submit_add'])) {
-    add($_POST['tanggal_mulai'], $_POST['tanggal_selesai'], "Cuti Bersama", $_POST['keterangan_cuti'], "Di Terima");
+    add($_POST['tanggal_mulai'], $_POST['tanggal_selesai'], $_POST['keterangan_cuti']);
     header("location:index.php?page=cuti-bersama&msg=success");
   }
 

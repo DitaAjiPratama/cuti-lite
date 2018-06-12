@@ -58,7 +58,7 @@
   // Fungsi add()
   // ==============================================================================
 
-  function add($tanggal_mulai, $tanggal_selesai, $jenis_cuti, $keterangan_cuti, $status_pengajuan, $id_karyawan) {
+  function add($tanggal_mulai, $tanggal_selesai, $jenis_cuti, $keterangan_cuti, $id_karyawan) {
 
     include "config/connection.php";
 
@@ -74,7 +74,7 @@
         '$tanggal_selesai',
         '$jenis_cuti',
         '$keterangan_cuti',
-        '$status_pengajuan',
+        'Pending',
         '$id_karyawan'
       )
     ";
@@ -88,7 +88,7 @@
   }
 
   if (isset($_POST['submit_add'])) {
-    add($_POST['tanggal_mulai'], $_POST['tanggal_selesai'], $_POST['jenis_cuti'], $_POST['keterangan_cuti'], "Pending", $_POST['id_karyawan']);
+    add($_POST['tanggal_mulai'], $_POST['tanggal_selesai'], $_POST['jenis_cuti'], $_POST['keterangan_cuti'], $_POST['id_karyawan']);
     // header("location:index.php?page=status-cuti");
   }
 
