@@ -10,7 +10,7 @@ CREATE TABLE `karyawan` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nama` varchar(50) NOT NULL,
   `divisi` varchar(50) NOT NULL,
-  `jatah_cuti_per_tahun` int(11) NOT NULL,
+  `jatah_cuti_per_tahun` int(3) NOT NULL,
   `username` varchar(200) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `username` (`username`),
@@ -18,7 +18,7 @@ CREATE TABLE `karyawan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 INSERT INTO `karyawan` (`id`, `nama`, `divisi`, `jatah_cuti_per_tahun`, `username`) VALUES
-(1,	'Ella',	'HRD',	20,	'ella');
+(1,	'Ibu HRD',	'HRD',	20,	'admin');
 
 DROP TABLE IF EXISTS `status_cuti`;
 CREATE TABLE `status_cuti` (
@@ -42,11 +42,11 @@ DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `username` varchar(200) NOT NULL,
   `password` varchar(600) NOT NULL,
-  `level` varchar(200) NOT NULL,
+  `level` varchar(8) NOT NULL,
   PRIMARY KEY (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 INSERT INTO `users` (`username`, `password`, `level`) VALUES
-('ella',	'password',	'admin');
+('admin',	'password',	'admin');
 
--- 2018-06-10 14:33:08
+-- 2018-06-12 21:38:19
