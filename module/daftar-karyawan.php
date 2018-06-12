@@ -329,10 +329,10 @@
 
           <div class="form-group">
             <label for="level"><b>Level :</b></label>
-            <input class="form-control" type="text" id="level" name="level" value="<?= $row['level']; ?>">
+            <!-- <input class="form-control" type="text" id="level" name="level" value="<?= $row['level']; ?>"> -->
             <select class="form-control" id="level" name="level">
               <option value="" disabled>Select Level</option>
-              <option value="admin" 
+              <option value="admin"
                 <?php if ($row['level'] == "admin") echo "selected"; ?>
               >admin</option>
               <option value="user"
