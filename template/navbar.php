@@ -47,6 +47,15 @@
       <?php } ?>
 
       <?php if ($_SESSION["level"]=="admin") { ?>
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Riwayat Cuti Karyawan">
+        <a class="nav-link" href="?page=riwayat-cuti">
+          <i class="fa fa-fw fa-clock-o"></i>
+          <span class="nav-link-text">Riwayat Cuti Karyawan</span>
+        </a>
+      </li>
+      <?php } ?>
+
+      <?php if ($_SESSION["level"]=="admin") { ?>
       <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Daftar Karyawan">
         <a class="nav-link" href="?page=daftar-karyawan">
           <i class="fa fa-fw fa-users"></i>
