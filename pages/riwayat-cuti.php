@@ -15,6 +15,7 @@
         <thead>
           <tr>
             <th>Nama Karyawan</th>
+            <th>Divisi</th>
             <th>Tanggal</th>
             <th>Jenis Cuti</th>
             <th>Keterangan</th>

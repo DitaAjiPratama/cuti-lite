@@ -22,6 +22,7 @@
 
   <tr>
     <td><?= $row['nama']; ?></td>
+    <td><?= $row['divisi']; ?></td>
     <td><?= $row['tanggal_mulai']; ?> - <?= $row['tanggal_selesai']; ?></td>
     <td><?= $row['jenis_cuti']; ?></td>
     <td><?= $row['keterangan_cuti']; ?></td>
